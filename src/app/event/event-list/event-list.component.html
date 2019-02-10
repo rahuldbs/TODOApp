@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-card class="event-card mat-elevation-z2" *ngFor="let day of days" [ngClass]="{'selected': isSelected(day),'mat-elevation-z8': isSelected(day)}" (click)="selectADay(day)"> 
+    <mat-card-header>
+      <mat-card-title>{{day}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let event of myEvents[day]" class="event">
+          <div class="event-text">{{event.item.title}}</div>
+          <mat-icon mat-action-icon class="event-action green" (click)='onEditEvent(event.item)'>edit</mat-icon>
+          <mat-icon mat-action-icon class="event-action red" (click)='onDeleteEvent(event.item.id)'>close</mat-icon>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

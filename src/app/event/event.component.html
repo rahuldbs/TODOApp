@@ -1,0 +1,22 @@
+<app-event-list [selectedDay]='selectedDay' (dayChange)='onSelectedDay($event)' (eventEdit)='onEditEvent($event)'></app-event-list>
+<div class="event-create-container">
+
+    <mat-card>
+        <mat-card-header class="heading">
+            <div>Add/Edit Event for <span>{{selectedDay}}</span></div>
+        </mat-card-header>
+        <mat-card-content>
+            <form (submit)="onAddEvent(postForm)" #postForm="ngForm">
+                <mat-form-field>
+                    <input matInput type="text" name="title" [ngModel]="selectedEvent" required placeholder="Event Title" #title="ngModel">
+                    <mat-error *ngIf="title.invalid">Please enter some title</mat-error>
+                </mat-form-field>
+                <div class="button-container">
+                        <button mat-raised-button color="accent" type="submit">Submit</button>
+                        <button mat-raised-button color="accent" type="reset">Clear</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+
+</div>

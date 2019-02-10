@@ -1,0 +1,36 @@
+.event-action{
+    opacity: 0;
+}
+.event:hover .event-action{
+    opacity: 1;
+}
+.container{
+    display: flex;
+    margin-bottom: 20px;
+}
+.event-card{
+    flex:1;
+    box-sizing: border-box;
+    margin: 5px;
+    min-height: 200px;
+    /* max-height: 400px;
+    overflow: auto; */
+}
+.event-card.selected{
+    /* border: 2px dotted green; */
+    background-color: #ffffe6;
+}
+.event-text {
+    padding-right: 10px; 
+    flex: 1;
+}
+mat-icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.red {
+    color: darkred;
+}
+.green {
+    color: darkgreen;
+}
