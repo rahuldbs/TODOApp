@@ -7,12 +7,14 @@
 .container{
     display: flex;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 .event-card{
     flex:1;
     box-sizing: border-box;
     margin: 5px;
     min-height: 200px;
+    flex-basis: 10%;
     /* max-height: 400px;
     overflow: auto; */
 }
